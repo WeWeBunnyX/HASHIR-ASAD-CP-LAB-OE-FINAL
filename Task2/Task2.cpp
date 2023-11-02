@@ -21,28 +21,38 @@ int main()
 
 		for(; i<=j; i++) //User range iteration
 		{ 
-           if(i/i==1 && i/1==i) //Divisible by number itself and 1 i.e Prime Number
-		   { 
-              cout<<i<<" ";
-		   }
-		}
-	}
-
+           { 
+            int div;
+            for(div=2; div*div<=i; div++)
+            {
+                if (i%div==0) 
+                {
+                    break;
+                }
+            }
+            if(div*div > i && i > 1)
+                cout << i << " ";
+        }
+        cout << endl;
+    }
     else if(option==2)
-	cout<<"\nEnter the number: ";
-    cin>>i;
+    {
+        cout<<"\nEnter the number: ";
+        cin>>i;
+        int div;
+        for (div = 2; div*div <= i; div++)
+        {
+            if (i%div == 0) 
+            {
+                break;
+            }
+        }
+        if(div*div > i && i > 1)
+            cout << "The number you entered (" << i << ") is prime";
+        else 
+            cout<< "The number you entered (" << i << ") is not prime";
+    }
 
-    if(i/i==1)
 
-	{ cout<<"\nEnter the number:";
-	  cin>>i;
-	  cout<<"The number you entered"<<"(" <<i<< ")"<<"is prime"; }
-}
-
-	else
-	{ cout<<"The number you entered"<<"(" <<i<< ")"<<"is not prime"; }
-		
-		
-return 0;
-
+    return 0;
 }
