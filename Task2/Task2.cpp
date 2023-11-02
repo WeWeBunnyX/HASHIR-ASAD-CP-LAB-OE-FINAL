@@ -17,7 +17,32 @@ int main()
 		cout << "\nEnter ending range.";
 		cin >> j;
 
-		cout<<"\nPrime Numbers between range of"<<i<<"and"<<j<<"are : "
+		cout<<"\nPrime Numbers between range of "<<i<<" and "<<j<<" are : ";
 
-		int factors = 0;
-		for (int i =1; i<=j; i++) 
+		for(; i<=j; i++) //User range iteration
+		{ 
+           if(i/i==1 && i/1==i) //Divisible by number itself and 1 i.e Prime Number
+		   { 
+              cout<<i<<" ";
+		   }
+		}
+	}
+
+    else if(option==2)
+	cout<<"\nEnter the number: ";
+    cin>>i;
+
+    if(i/i==1)
+
+	{ cout<<"\nEnter the number:";
+	  cin>>i;
+	  cout<<"The number you entered"<<"(" <<i<< ")"<<"is prime"; }
+}
+
+	else
+	{ cout<<"The number you entered"<<"(" <<i<< ")"<<"is not prime"; }
+		
+		
+return 0;
+
+}
