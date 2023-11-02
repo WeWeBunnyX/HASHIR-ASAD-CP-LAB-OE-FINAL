@@ -17,11 +17,7 @@ int main()
 		cout << "\nEnter ending range.";
 		cin >> j;
 
+		cout<<"\nPrime Numbers between range of"<<i<<"and"<<j<<"are : "
+
 		int factors = 0;
-		for (int i =1; i<=j; i++) {
-			if (n%i==0) 
-			
-			{
-				factors++;
-			}
-	
+		for (int i =1; i<=j; i++) 
